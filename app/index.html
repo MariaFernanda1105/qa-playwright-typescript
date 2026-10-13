@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aplicação demonstrativa de lista de tarefas para automação de testes." />
+    <title>Lista de tarefas | QA Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">APLICAÇÃO DEMONSTRATIVA</p>
+      <h1>Minha lista</h1>
+      <p class="intro">Organize pequenas tarefas do seu dia.</p>
+      <form id="todo-form" aria-label="Adicionar tarefa">
+        <label class="sr-only" for="new-todo">Nova tarefa</label>
+        <input id="new-todo" name="todo" placeholder="O que precisa ser feito?" autocomplete="off" required />
+        <button type="submit">Adicionar</button>
+      </form>
+      <section class="list-panel" aria-label="Tarefas">
+        <ul id="todo-list" aria-live="polite"></ul>
+        <p id="empty-state">Nenhuma tarefa por enquanto.</p>
+      </section>
+      <footer>
+        <span id="items-count" aria-live="polite">0 tarefas restantes</span>
+        <nav aria-label="Filtrar tarefas">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="filter" type="button" data-filter="active" aria-pressed="false">Ativas</button>
+          <button class="filter" type="button" data-filter="completed" aria-pressed="false">Concluídas</button>
+        </nav>
+      </footer>
+    </main>
+    <p class="note">Projeto de portfólio: testes funcionais com Playwright e TypeScript.</p>
+  </body>
+</html>

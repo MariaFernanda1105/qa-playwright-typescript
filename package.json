@@ -1,0 +1,19 @@
+{
+  "name": "qa-playwright-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto demonstrativo de automação de testes web com Playwright e TypeScript.",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.0"
+  }
+}
